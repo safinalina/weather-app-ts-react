@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./WeatherApp.css";
 import search_icon from "../assets/search.png";
 import clear_icon from "../assets/clear.png";
@@ -97,7 +97,7 @@ const WeatherApp = () => {
     getData(cityInput);
   };
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     search();
   };
